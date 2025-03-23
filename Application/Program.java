@@ -17,8 +17,15 @@ public class Program {
         System.out.println("quantidade em estoque: ");
         product.quantity = entrada.nextInt();
 
-        System.out.println(product.name + "," + product.price + "," + product.quantity);
-
+        System.out.println("product data: " + product);
+        System.out.println("Enter the number of product to be added in stock: ");
+        int quantity = entrada.nextInt();
+        product.addProducts(quantity);
+        System.out.println("update data: " + product);
+        System.out.println("Enter the number of product to be removed in stock: ");
+        quantity = entrada.nextInt();
+        product.removeProducts(quantity);
+        System.out.println("update data: " + product);
         entrada.close();
     }
 }
